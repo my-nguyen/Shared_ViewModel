@@ -21,10 +21,12 @@
     tools:context=".SummaryFragment">
 
     <data>
-
         <variable
             name="viewModel"
             type="com.nguyen.shared_viewmodel.model.OrderViewModel" />
+        <variable
+            name="summaryFragment"
+            type="com.nguyen.shared_viewmodel.SummaryFragment" />
     </data>
 
     <ScrollView
@@ -132,6 +134,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/side_margin"
+                android:onClick="@{() -> summaryFragment.sendOrder()}"
                 android:text="@string/send" />
 
         </LinearLayout>
